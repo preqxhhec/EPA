@@ -1,0 +1,178 @@
+body{
+    margin: auto;
+    padding: 0;
+    padding-top: 5px;
+    align-items: center;
+   
+}
+
+.formulario{
+ margin: 1cm auto;
+ width: 19cm;
+ height: 29,7cm;
+ margin-top: 10px;
+ padding: 5px;
+ border: 1px solid #000;
+ font-family: sans-serif;
+ font-size: 10px;
+ align-items: center;
+ box-sizing: border-box;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+img{
+    width: 90px;
+    }
+
+h1{
+    margin-top: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 25px;
+    align-items: center;
+}
+
+h2{
+    padding-top: 0%;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+
+
+.cirujano{
+    width: 48% ;
+}
+
+.inputficha{
+    width: 10%;
+}
+
+
+
+.nombre{
+    width: 30%;
+    margin-top: 5px;
+}
+.rut{
+    width: 15%;
+}
+
+.lebelrut{
+    padding-right: 19px;
+    padding-left: 12px;
+}
+
+.edad{
+    width: 6%;
+}
+
+.diagnostico{
+    width: 35%;
+margin-top: 5px;
+}
+
+.labelcx{
+    padding-right: 13px;
+}
+.cirugia{
+    width: 41%;
+}
+
+.fieldset1, .fieldset2, .fieldset3, .fieldset4,.fieldset5,.fieldset6{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: #f1f1f1;
+        
+}
+
+.medicos, .medicamentos, .laboratorios,.evaluaciones{
+    width: 48.5%;
+    max-height: 80px;
+    overflow-y: hidden;
+    resize: none;
+    
+}
+
+
+.EKG{
+    padding-top: 5PX;
+   
+}
+
+.ekg{
+    display: inline-block;
+    width: 94%;
+}
+
+
+.presion-arterial, .frecuencia-cardiaca, .frecuencia-respiratoria, .saturacion, .peso, .talla, .imc{
+    width: 9.5%;
+    font-family: sans-serif;
+    font-size: 12px;
+    display: inline-block;
+
+}
+
+
+.indicaciones{
+    width: 98%;
+    max-height: 110px;
+    overflow-y: hidden;
+    resize: none;
+}
+
+.anestesiologos{
+    display: inline-block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#anestesiologo{
+    display: inline-block;
+    width: 50%;
+
+}
+
+.firma{
+    margin-left: 90px;
+}
+
+.BTN, .botonpwd, .btnPxNew{
+    width: auto;
+    margin: auto;
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+
+.formulario{
+    display: none;
+}
+
+#acceso{
+    width: 350px;
+    justify-items: center;
+    margin: auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2);
+}
+
+.botonpwd{
+    display: inline-block;
+}
+
+#botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
