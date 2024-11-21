@@ -28,7 +28,7 @@ document.getElementById('BTN').addEventListener('click', function(e) {
 
   function verificarContraseña() {
     var password = document.getElementById("password").value;
-    if (password === "") {
+    if (password === "Epa0102") {
         document.getElementById("formulario").style.display = "block";
         document.getElementById("acceso").style.display = "none";
     } else {
