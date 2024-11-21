@@ -42,7 +42,7 @@ h2{
 
 .cirujano{
     width: 42% ;
-     display: block;
+     display: inline-block;
 }
 
 .inputficha{
