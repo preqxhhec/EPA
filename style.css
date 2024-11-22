@@ -40,10 +40,15 @@ h2{
 
 
 
-.cirujano{
-    width: 42% ;
-     display: inline-block;
+
+
+.select{
+  width: 46%;
+    display: inline-block;
+
 }
+
+
 
 .inputficha{
     width: 10%;
