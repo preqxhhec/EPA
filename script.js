@@ -3,7 +3,7 @@ document.getElementById('BTN').addEventListener('click', function(e) {
     e.preventDefault();
     var formData = new FormData(document.getElementById('formulario'));
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzz_RqmMLTc0Z9XJ3dadAsNKkkxv8NUnSdbCUhglzgKjJcU7Z4sZoU-wxSbzSfQt4ttrg/exec');
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbyQxGIe4_jEwZx56w1BX9bIrbArxoEnNcIFot9bp5m-SftOsewlN4A8yptf0u9sAiqobw/exec');
     xhr.reload = function() {
       document.getElementById('formulario').reload(); 
     // Recargar formulario
