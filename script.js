@@ -6,6 +6,7 @@ document.getElementById('BTN').addEventListener('click', function(e) {
     xhr.open('POST', 'https://script.google.com/macros/s/AKfycbyQxGIe4_jEwZx56w1BX9bIrbArxoEnNcIFot9bp5m-SftOsewlN4A8yptf0u9sAiqobw/exec');
     xhr.reload = function() {
       document.getElementById('formulario').reload(); 
+
     // Recargar formulario
 
       
@@ -16,9 +17,13 @@ document.getElementById('BTN').addEventListener('click', function(e) {
 
 
 
-
-
-
+  document.getElementById('BTN').addEventListener('click', function() {
+    window.print();
+    window.location.reload();
+    alert('Registro exitoso!');
+    document.getElementById('form').reset();
+  });
+  
 
 
 
@@ -28,9 +33,11 @@ document.getElementById('BTN').addEventListener('click', function(e) {
 
   function verificarContraseña() {
     var password = document.getElementById("password").value;
+    var imagen = document.querySelector('.img2');
     if (password === "Epa0102") {
         document.getElementById("formulario").style.display = "block";
         document.getElementById("acceso").style.display = "none";
+        imagen.style.display = 'none';
     } else {
         alert("Contraseña incorrecta");
     }
@@ -74,11 +81,6 @@ window.onload = setFechaActual;
 
 
 
-  function limpiarFormulario() {
-    document.getElementById('fecha').value = '';
-    document.getElementById('ficha').value = '';
-    document.getElementById('cirujano').value = '';
-  }
 
 
 
