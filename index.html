@@ -117,14 +117,14 @@
         </div>
 
         <div class="textarea1">
-        <textarea class="medicos" name="medicos" rows="5" maxlength="250" oninput="this.value=this.value.substring(0,250);" placeholder="otros medicos / quirurgicos / Observaciones"></textarea>
+        <textarea class="medicos" name="medicos" id="medicos" rows="5" cols="40" oninput="limitLines(this, 5)" ; placeholder="otros medicos / quirurgicos / Observaciones"></textarea>
            
-        <textarea class="medicamentos" name="medicamentos" rows="5" maxlength="250" oninput="this.value=this.value.substring(0,250);" placeholder="Medicamentos (frecuencia y posologia)"></textarea>
+        <textarea class="medicamentos" name="medicamentos" id="medicamentos" rows="5" cols="40" oninput="limitLines(this, 5)" ; placeholder="Medicamentos (frecuencia y posologia")></textarea>
         </div>
             
         <div class="sintomatico">
             <label for="sr" >SINTOMATICO RESPIRATORIO.</label>
-            <input type="checkbox" class="sr" name="sr" id="sr">
+            <input type="checkbox" class="sr" name="sr" id="sr">    
             <label for="scv"">SINTOMATICO CARDIOVASCULAR.</label>
             <input type="checkbox"  class="scv" name="scv" id="scv">
            
@@ -137,9 +137,9 @@
            <fieldset class="fieldset3">
             <h2>LABORATORIOS Y EVALUACIONES COMPLEMENTARIAS</h2>
              <div class="textarea3">
-                <textarea class="laboratorios" name="laboratorios" rows="5" maxlength="250" oninput="this.value=this.value.substring(0,250);" placeholder="Laboratorios"></textarea>
+                <textarea class="laboratorios" name="laboratorios" rows="5" cols="40" oninput="limitLines(this, 5)"; placeholder="Laboratorios"></textarea>
 
-                <textarea class="evaluaciones" name="evaluaciones" rows="5" maxlength="250" oninput="this.value=this.value.substring(0,250);" placeholder="Evalualuaciones / interconsultas / estudios"></textarea>
+                <textarea class="evaluaciones" name="evaluaciones" rows="5" cols="40" oninput="limitLines(this, 5)"; placeholder="Evaluaciones / interconsultas / estudios"></textarea>
             </div>
 
 
@@ -237,7 +237,7 @@
          <fieldset class="fieldset6">
             <h2>INDICACIONES</h2>
              <div class="textarea">
-                <textarea class="indicaciones" name="indicaciones" rows="8" maxlength="250" oninput="this.value=this.value.substring(0,250);" placeholder="Condicionalidad / indicaciones / suspensión o mantenimiento de farmacos / solicitud de ic."></textarea>
+                <textarea class="indicaciones" name="indicaciones" rows="8" cols="90" oninput="limitLines(this, 8)"; placeholder="Condicionalidad / indicaciones / suspensión o mantenimiento de farmacos / solicitud de ic."></textarea>
 
                
             </div>
@@ -298,4 +298,3 @@
 
 
 </html>
-
