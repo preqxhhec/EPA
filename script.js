@@ -84,7 +84,20 @@ window.onload = setFechaActual;
 
 
 
-
-
-
-
+    function limitLines(textarea, maxLines) {
+      let lines = textarea.value.split('\n');
+      if (lines.length > maxLines) {
+          textarea.value = lines.slice(0, maxLines).join('\n');
+      } else {
+          // Check if any line exceeds the width of the textarea
+          let newValue = '';
+          for (let i = 0; i < lines.length; i++) {
+              while (lines[i].length > textarea.cols) {
+                  newValue += lines[i].substring(0, textarea.cols) + '\n';
+                  lines[i] = lines[i].substring(textarea.cols);
+              }
+              newValue += lines[i] + (i < lines.length - 1 ? '\n' : '');
+          }
+          textarea.value = newValue;
+      }
+  }
