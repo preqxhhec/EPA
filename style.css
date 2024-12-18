@@ -5,6 +5,7 @@ body{
     align-items: center;
     display: flex;
     justify-content: center;
+    background: linear-gradient(to right, #007bff, #00c6ff, #28a745,#ffc107);
 }
 
 .formulario{
