@@ -53,7 +53,7 @@ document.getElementById('BTN').addEventListener('click', function(e) {
     const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Los meses empiezan desde 0
     const año = hoy.getFullYear();
 
-    const fechaActual = `${año}-${mes}-${dia}`;
+    const fechaActual = `${dia}-${mes}-${año}`;
     document.getElementById('fecha').value = fechaActual;
 }
 
