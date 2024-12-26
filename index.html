@@ -28,7 +28,7 @@
     
 
 
-        <form name="formulario"   id="formulario" class="formulario"   action="https://script.google.com/macros/s/AKfycbyQxGIe4_jEwZx56w1BX9bIrbArxoEnNcIFot9bp5m-SftOsewlN4A8yptf0u9sAiqobw/exec" method="post">
+        <form name="formulario"   id="formulario" class="formulario"   action="https://script.google.com/macros/s/AKfycbxoyQRMJ_-ZI1CTZ2eO5F4wBXnLeMQbukYlKLzvNS2pUL36Z2o7LEPMtQNStHhwi94rdw/exec" method="post">
 
             <div class="h1btn">
             <img src="https://www.hospitalillapel.cl/institucional/wp-content/uploads/2019/07/LOGO-CHICO-03_hospital_vert.png" alt="logo hospital de illapel">
@@ -66,7 +66,7 @@
             </div>
 
             <div class="div2"> 
-                <label for="nombre"= nombre>NOMBRE Y APELLIDO</label>
+                <label for="nombre">NOMBRE Y APELLIDO</label>
                 <input type="text" class="nombre" name="nombre">
                 <label for="rut"> RUT</label>
                 <input type="text" class="rut" name="rut" id="rut" placeholder="sin (.) con (-)">
@@ -98,7 +98,7 @@
                     
             <label for="hta">HTA</label>
             <input type="checkbox" class="hta" name="hta" id="hta">
-            <label for="diabetes" ">DM</label>
+            <label for="diabetes" >DM</label>
             <input type="checkbox" class="diabetes" name="diabetes" id="diabetes">
             <label for="asma" >ASMA B.</label>
             <input type="checkbox" class="asma" name="asma">
@@ -117,15 +117,15 @@
         </div>
 
         <div class="textarea1">
-        <textarea class="medicos" name="medicos" id="medicos" rows="5" cols="40" oninput="limitLines(this, 5)" ; placeholder="otros medicos / quirurgicos / Observaciones"></textarea>
+        <textarea class="medicos" name="medicos" id="medicos" rows="5"  ; placeholder="otros medicos / quirurgicos / Observaciones"></textarea>
            
-        <textarea class="medicamentos" name="medicamentos" id="medicamentos" rows="5" cols="40" oninput="limitLines(this, 5)" ; placeholder="Medicamentos (frecuencia y posologia")></textarea>
+        <textarea class="medicamentos" name="medicamentos" id="medicamentos" rows="5"  ; placeholder="Medicamentos (frecuencia y posologia")></textarea>
         </div>
             
         <div class="sintomatico">
             <label for="sr" >SINTOMATICO RESPIRATORIO.</label>
             <input type="checkbox" class="sr" name="sr" id="sr">    
-            <label for="scv"">SINTOMATICO CARDIOVASCULAR.</label>
+            <label for="scv">SINTOMATICO CARDIOVASCULAR.</label>
             <input type="checkbox"  class="scv" name="scv" id="scv">
            
 
@@ -137,9 +137,9 @@
            <fieldset class="fieldset3">
             <h2>LABORATORIOS Y EVALUACIONES COMPLEMENTARIAS</h2>
              <div class="textarea3">
-                <textarea class="laboratorios" name="laboratorios" rows="5" cols="40" oninput="limitLines(this, 5)"; placeholder="Laboratorios"></textarea>
+                <textarea class="laboratorios" name="laboratorios" rows="5" ; placeholder="Laboratorios"></textarea>
 
-                <textarea class="evaluaciones" name="evaluaciones" rows="5" cols="40" oninput="limitLines(this, 5)"; placeholder="Evaluaciones / interconsultas / estudios"></textarea>
+                <textarea class="evaluaciones" name="evaluaciones" rows="5" ; placeholder="Evaluaciones / interconsultas / estudios"></textarea>
             </div>
 
 
@@ -270,6 +270,7 @@
             <div id="botones">   
              
                 <button type="submit"  class="BTN" name="BTN" id="BTN">Imprimir</button>
+                <button type="reset" class="BTNR" name="BTNR" id="BTNR">NUEVO PACIENTE</button> 
                 
                 
                
