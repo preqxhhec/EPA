@@ -1,29 +1,19 @@
-// recargar el formulario //
 document.getElementById('BTN').addEventListener('click', function(e) {
     e.preventDefault();
     var formData = new FormData(document.getElementById('formulario'));
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbyQxGIe4_jEwZx56w1BX9bIrbArxoEnNcIFot9bp5m-SftOsewlN4A8yptf0u9sAiqobw/exec');
+    xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxoyQRMJ_-ZI1CTZ2eO5F4wBXnLeMQbukYlKLzvNS2pUL36Z2o7LEPMtQNStHhwi94rdw/exec');
     xhr.reload = function() {
-      document.getElementById('formulario').reload(); 
-
-    // Recargar formulario
-
-      
+      document.getElementById('form').reload(); 
+     
     };
+    window.print();
     xhr.send(formData);
+    alert('¡Registro exitoso!');
     
   });
 
 
-
-  document.getElementById('BTN').addEventListener('click', function() {
-    window.print();
-    window.location.reload();
-    alert('Registro exitoso!');
-    document.getElementById('form').reset();
-  });
-  
 
 
 
@@ -47,17 +37,45 @@ document.getElementById('BTN').addEventListener('click', function(e) {
 
 
 
-  function setFechaActual() {
-    const hoy = new Date();
-    const dia = String(hoy.getDate()).padStart(2, '0');
-    const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Los meses empiezan desde 0
-    const año = hoy.getFullYear();
+function cargarFechaActual() {
+    var today = new Date();
+    var day = ("0" + today.getDate()).slice(-2);
+    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+    var year = today.getFullYear();
+    var todayString = year + "-" + month + "-" + day;
+    document.getElementById("fecha").value = todayString;
+  }
 
-    const fechaActual = `${dia}-${mes}-${año}`;
-    document.getElementById('fecha').value = fechaActual;
-}
+  window.onload = function() {
+    cargarFechaActual();
+  }
 
-window.onload = setFechaActual;
+  document.getElementById("BTNR").onclick = function() {
+    setTimeout(cargarFechaActual, 0);
+  }
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
 
 
 
@@ -84,20 +102,4 @@ window.onload = setFechaActual;
 
 
 
-    function limitLines(textarea, maxLines) {
-      let lines = textarea.value.split('\n');
-      if (lines.length > maxLines) {
-          textarea.value = lines.slice(0, maxLines).join('\n');
-      } else {
-          // Check if any line exceeds the width of the textarea
-          let newValue = '';
-          for (let i = 0; i < lines.length; i++) {
-              while (lines[i].length > textarea.cols) {
-                  newValue += lines[i].substring(0, textarea.cols) + '\n';
-                  lines[i] = lines[i].substring(textarea.cols);
-              }
-              newValue += lines[i] + (i < lines.length - 1 ? '\n' : '');
-          }
-          textarea.value = newValue;
-      }
-  }
+      
