@@ -157,7 +157,7 @@ margin-top: 5px;
     margin-left: 90px;
 }
 
-.BTN, .botonpwd, .btnPxNew{
+.BTN, .botonpwd, .btnPxNew, .BTNR{
     width: auto;
     margin: auto;
     display: block;
@@ -181,6 +181,11 @@ margin-top: 5px;
 .BTN:hover{
      background-color: #005600;
                         }
+
+.BTNR:hover{
+    background-color: #005600;
+                                               }
+                                              
 
 .formulario{
     display: none;
