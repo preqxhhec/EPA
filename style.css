@@ -223,3 +223,7 @@ https://github.com/preqxhhec/EPA/blob/main/style.css
     margin-right: 20px; /* Espacio entre la imagen y los elementos */
 }
 
+.H1, .img2{
+    display: inline-block; 
+    vertical-align: middle;
+}
