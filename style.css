@@ -1,7 +1,7 @@
 body{
     margin: auto;
-    padding: 0;
-    padding-top: 5px;
+       padding-top: 10px;
+    padding-bottom: 10px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -9,9 +9,9 @@ body{
 }
 
 .formulario{
- margin: 1cm auto;
+ margin: 0;
  width: 19cm;
- height: 29,7cm;
+ height: 26.5cm;
  margin-top: 10px;
  padding: 5px;
  border: 1px solid #000;
@@ -21,7 +21,13 @@ body{
  box-sizing: border-box;
  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
  background-color: white; 
+ 
 }
+
+
+
+
+
 
 img{
     width: 90px;
@@ -150,8 +156,8 @@ margin-top: 5px;
 .anestesiologos{
     display: inline-block;
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #anestesiologo{
@@ -237,8 +243,8 @@ margin-top: 5px;
 
 
 .search-section {
-    margin: 20px 0;
-    padding: 10px;
+    margin: 5px 0;
+    padding: 5px;
     background-color: #f8f9fa;
     border-radius: 5px;
     display: flex;
@@ -270,14 +276,10 @@ margin-top: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
-@page {
-  size: 210mm 297mm;
-  margin: 10mm;
-  transform: scale(0.95);
-}
+
 
 .h1btn {
   display: flex;
