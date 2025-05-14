@@ -4,55 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-   
-   
     <title>Evaluación Preanestésica</title>
 </head>
 <body>
-
-  
-
-          
     <div id="divimg2">
         <img class="img2" src="https://www.hospitalillapel.cl/institucional/wp-content/uploads/2019/07/LOGO-CHICO-03_hospital_vert.png">
     </div>
 
-   
     <div id="acceso">
-
         <h2>ACCESO RESTRINGIDO</h2>
         <input type="password" id="password" placeholder="Contraseña">
         <button onclick="verificarContraseña()" class="botonpwd">OK</button>
-      
     </div>
-    
 
-
-        <form name="formulario"   id="formulario" class="formulario"   action="https://script.google.com/macros/s/AKfycbxoyQRMJ_-ZI1CTZ2eO5F4wBXnLeMQbukYlKLzvNS2pUL36Z2o7LEPMtQNStHhwi94rdw/exec" method="post">
-
-            <div class="h1btn">
-            <img src="https://www.hospitalillapel.cl/institucional/wp-content/uploads/2019/07/LOGO-CHICO-03_hospital_vert.png" alt="logo hospital de illapel">
-            
-            
-            <h1>Evaluación Pre Anestésica</h1> 
-                    
+    <form name="formulario" id="formulario" class="formulario" action="https://script.google.com/macros/s/AKfycbzYf-vOcMrOquenIFpCaty7DuoeA434AmGKYe8h8xo1SUKjg47YciwLu0sfjvh4G0J24Q/exec" method="post">
+        <div class="h1btn">
+            <img class="img" src="https://www.hospitalillapel.cl/institucional/wp-content/uploads/2019/07/LOGO-CHICO-03_hospital_vert.png" alt="logo hospital de illapel">
+            <h1>Evaluación Pre Anestésica</h1>
         </div>
-       
-                
-<fieldset class="fieldset1">
 
-    <h2>DATOS DE IDENTIFICACIÓN</h2>
+        <!-- New Search Section -->
+     <div class="search-section">
+  <label for="rutSearch">Buscar por RUT:</label>
+  <input type="text" id="rutSearch" placeholder="sin (.) con (-)">
+  <button type="button" onclick="searchRut()" class="botonpwd">Buscar</button>
+  <button type="button" onclick="cargarFechaActual()" class="botonpwd">Actualizar Fecha</button>
+  <div id="searchResult"></div>
+</div>
 
+
+        <fieldset class="fieldset1">
+            <h2>DATOS DE IDENTIFICACIÓN</h2>
             <div class="div1">
-                <label for="fecha" class="lineafecha" >FECHA</label>
+                <label for="fecha" class="lineafecha">FECHA</label>
                 <input type="date" class="fecha" id="fecha" name="fecha">
-                <label for="ficha" class="ficha"> FICHA N°</label>
-                <Input type="text" class="inputficha" id="ficha" name="ficha"></INput>
-                <label for="cirujano"class="cirujano">ESPECIALIDAD</label>
-
-
-                <select name="select" class="select">
-                    <option ></option>
+                <label for="ficha" class="ficha">FICHA N°</label>
+                <input type="text" class="inputficha" id="ficha" name="ficha">
+                <label for="select" class="cirujano">ESPECIALIDAD</label>
+                <select name="select" class="select" id="select">
+                    <option></option>
                     <option value="Cirugia Adulto">Cirugia Adulto</option>
                     <option value="Cirugia Infantil">Cirugia Infantil</option>
                     <option value="Ginecologia">Ginecologia</option>
@@ -62,136 +52,112 @@
                     <option value="Traumatologia">Traumatologia</option>
                     <option value="Urologia">Urologia</option>
                 </select>
-                      
             </div>
 
-            <div class="div2"> 
+            <div class="div2">
                 <label for="nombre">NOMBRE Y APELLIDO</label>
-                <input type="text" class="nombre" name="nombre">
-                <label for="rut"> RUT</label>
+                <input type="text" class="nombre" name="nombre" id="nombre">
+                <label for="rut">RUT</label>
                 <input type="text" class="rut" name="rut" id="rut" placeholder="sin (.) con (-)">
                 <label for="edad">Edad</label>
                 <input type="number" class="edad" name="edad" id="edad">
-                <label for="genero">Genero</label>
-                <select name="genero" class="genero">
+                <label for="genero">Género</label>
+                <select name="genero" class="genero" id="genero">
                     <option value=""></option>
                     <option value="masculino">M</option>
                     <option value="femenino">F</option>
-                    </select>
-             </div>
+                </select>
+            </div>
 
-             <div class="div3">
+            <div class="div3">
                 <label for="diagnostico">DIAGNÓSTICO</label>
                 <input type="text" class="diagnostico" name="diagnostico" id="diagnostico">
                 <label for="cirugia">CIRUGÍA</label>
                 <input type="text" class="cirugia" name="cirugia" id="cirugia">
-             </div>           
-                
- </fieldset>
+            </div>
+        </fieldset>
 
-
-                   
-<fieldset class="fieldset2">
-                   
-    <h2>ANTECEDENTES MEDICOS / QUIRURGICOS / MEDICAMENTOS</h2>  
-                    <div class="antecedetes">
-                    
-            <label for="hta">HTA</label>
-            <input type="checkbox" class="hta" name="hta" id="hta">
-            <label for="diabetes" >DM</label>
-            <input type="checkbox" class="diabetes" name="diabetes" id="diabetes">
-            <label for="asma" >ASMA B.</label>
-            <input type="checkbox" class="asma" name="asma">
-            <label for="hipotiroidismo">HIPO T4</label>
-            <input type="checkbox" class="hipotiroidismo" name="hipotiroidismo" id="hipotiroidismo">
-            <label for="hipertiroidismo">HIPER T4</label>
-            <input type="checkbox" class="hipertiroidismo" name="hipertiroidismo" id="hipertiroidismo">
-            <label for="chagas">CHAGAS</label>
-            <input type="checkbox" class="chagas" name="chagas" id="chagas">
-            <label for="insuficiencia cardiaca">INSUF.  CARD.</label>
-            <input type="checkbox" class="insuficiencia cardiaca" name="insuficiencia_cardiaca" id="insuficiencia cardiaca">
-            <label for="alergias" >ALERGIAS</label>
-            <input type="checkbox" class="alergias" name="alergias" id="alergias">
-            <label for="otros" >OTROS</label>
-            <input type="checkbox" class="otros" name="otros" id="otros">
-        </div>
-
-        <div class="textarea1">
-        <textarea class="medicos" name="medicos" id="medicos" rows="5"  ; placeholder="otros medicos / quirurgicos / Observaciones"></textarea>
-           
-        <textarea class="medicamentos" name="medicamentos" id="medicamentos" rows="5"  ; placeholder="Medicamentos (frecuencia y posologia")></textarea>
-        </div>
-            
-        <div class="sintomatico">
-            <label for="sr" >SINTOMATICO RESPIRATORIO.</label>
-            <input type="checkbox" class="sr" name="sr" id="sr">    
-            <label for="scv">SINTOMATICO CARDIOVASCULAR.</label>
-            <input type="checkbox"  class="scv" name="scv" id="scv">
-           
-
-        </div>
-           </fieldset>
-
-
-           
-           <fieldset class="fieldset3">
-            <h2>LABORATORIOS Y EVALUACIONES COMPLEMENTARIAS</h2>
-             <div class="textarea3">
-                <textarea class="laboratorios" name="laboratorios" rows="5" ; placeholder="Laboratorios"></textarea>
-
-                <textarea class="evaluaciones" name="evaluaciones" rows="5" ; placeholder="Evaluaciones / interconsultas / estudios"></textarea>
+        <fieldset class="fieldset2">
+            <h2>ANTECEDENTES MÉDICOS / QUIRÚRGICOS / MEDICAMENTOS</h2>
+            <div class="antecedetes">
+                <label for="hta">HTA</label>
+                <input type="checkbox" class="hta" name="hta" id="hta">
+                <label for="diabetes">DM</label>
+                <input type="checkbox" class="diabetes" name="diabetes" id="diabetes">
+                <label for="asma">ASMA B.</label>
+                <input type="checkbox" class="asma" name="asma" id="asma">
+                <label for="hipotiroidismo">HIPO T4</label>
+                <input type="checkbox" class="hipotiroidismo" name="hipotiroidismo" id="hipotiroidismo">
+                <label for="hipertiroidismo">HIPER T4</label>
+                <input type="checkbox" class="hipertiroidismo" name="hipertiroidismo" id="hipertiroidismo">
+                <label for="chagas">CHAGAS</label>
+                <input type="checkbox" class="chagas" name="chagas" id="chagas">
+                <label for="insuficiencia_cardiaca">INSUF. CARD.</label>
+                <input type="checkbox" class="insuficiencia_cardiaca" name="insuficiencia_cardiaca" id="insuficiencia_cardiaca">
+                <label for="alergias">ALERGIAS</label>
+                <input type="checkbox" class="alergias" name="alergias" id="alergias">
+                <label for="otros">OTROS</label>
+                <input type="checkbox" class="otros" name="otros" id="otros">
             </div>
 
+            <div class="textarea1">
+                <textarea class="medicos" name="medicos" id="medicos" rows="5" placeholder="otros médicos / quirúrgicos / Observaciones"></textarea>
+                <textarea class="medicamentos" name="medicamentos" id="medicamentos" rows="5" placeholder="Medicamentos (frecuencia y posología)"></textarea>
+            </div>
 
-           <div class="EKG">
-            <label> EKG</label>
-            <input type="text" class="ekg" name="ekg" id="ekg">
-        </div>
+            <div class="sintomatico">
+                <label for="sr">SINTOMÁTICO RESPIRATORIO</label>
+                <input type="checkbox" class="sr" name="sr" id="sr">
+                <label for="scv">SINTOMÁTICO CARDIOVASCULAR</label>
+                <input type="checkbox" class="scv" name="scv" id="scv">
+            </div>
+        </fieldset>
 
-         </fieldset>
+        <fieldset class="fieldset3">
+            <h2>LABORATORIOS Y EVALUACIONES COMPLEMENTARIAS</h2>
+            <div class="textarea3">
+                <textarea class="laboratorios" name="laboratorios" id="laboratorios" rows="5" placeholder="Laboratorios"></textarea>
+                <textarea class="evaluaciones" name="evaluaciones" id="evaluaciones" rows="5" placeholder="Evaluaciones / interconsultas / estudios"></textarea>
+            </div>
 
-   
-        
-         <fieldset class="fieldset4">
+            <div class="EKG">
+                <label>EKG</label>
+                <input type="text" class="ekg" name="ekg" id="ekg">
+            </div>
+        </fieldset>
+
+        <fieldset class="fieldset4">
             <h2>SIGNOS VITALES Y MEDIDAS ANTROPOMÉTRICAS</h2>
             <div class="signos vitales">
-                <label> PA</label>
-                <input type="text" class="presion-arterial" name="presion_arterial" id="presion-arterial">
-                <label> Fc</label>
-                <input type="text" class="frecuencia-cardiaca" name="frecuencia_cardiaca" id="frecuencia-cardiaca">
-                <label> Fr</label>
-                <input type="text" class="frecuencia-respiratoria" name="frecuencia_respiratoria" id="frecuencia-respiratoria">
-                <label> SatO2</label>
+                <label>PA</label>
+                <input type="text" class="presion-arterial" name="presion_arterial" id="presion_arterial">
+                <label>Fc</label>
+                <input type="text" class="frecuencia-cardiaca" name="frecuencia_cardiaca" id="frecuencia_cardiaca">
+                <label>Fr</label>
+                <input type="text" class="frecuencia-respiratoria" name="frecuencia_respiratoria" id="frecuencia_respiratoria">
+                <label>SatO2</label>
                 <input type="text" class="saturacion" name="saturacion" id="saturacion">
-                <label> Peso</label>
-                <input type="number" class="peso" name="peso"   id="peso" placeholder="Kg">
-                <label> Talla</label>
-                <input type="number" step="0.01" id="altura" class="talla" name="altura"   placeholder="Mts">
+                <label>Peso</label>
+                <input type="number" class="peso" name="peso" id="peso" placeholder="Kg">
+                <label>Talla</label>
+                <input type="number" step="0.01" id="altura" class="talla" name="altura" placeholder="Mts">
                 <label for="resultado">IMC:</label>
-                <input type="text" id="resultado"  name="imc"   class="imc" readonly>
-                
-       
-                
+                <input type="text" id="resultado" name="imc" class="imc" readonly>
+            </div>
+        </fieldset>
 
-
-         </fieldset>
-
-
-         
-         <fieldset class="fieldset5">
-            <h2>EVALUACIÓN DE VIA AEREA  </h2>
+        <fieldset class="fieldset5">
+            <h2>EVALUACIÓN DE VÍA AÉREA</h2>
             <div class="via aerea">
-                <label> AB</label>
-                <select name="apertura_bucal" id="ab">
+                <label>AB</label>
+                <select name="apertura_bucal" id="apertura_bucal">
                     <option value=""></option>
                     <option value="I">Clase I</option>
                     <option value="II">Clase II</option>
                     <option value="III">Clase III</option>
                     <option value="IV">Clase IV</option>
-
                 </select>
-
-                <label> MALLAMPATI</label>
+                <label>MALLAMPATI</label>
                 <select name="mallampati" id="mallampati">
                     <option value=""></option>
                     <option value="I">Clase I</option>
@@ -199,56 +165,41 @@
                     <option value="III">Clase III</option>
                     <option value="IV">Clase IV</option>
                 </select>
-
-                <label> DTM</label>
-                <select name="distancia_tiromentoniana" id="dtm">
+                <label>DTM</label>
+                <select name="distancia_tiromentoniana" id="distancia_tiromentoniana">
                     <option value=""></option>
                     <option value="I">Clase I</option>
                     <option value="II">Clase II</option>
                     <option value="III">Clase III</option>
                 </select>
-
-              
-                </select>
-
-                <label> ASA</label>
+                <label>ASA</label>
                 <select name="asa" id="asa">
                     <option value=""></option>
                     <option value="I">I</option>
                     <option value="II">II</option>
                     <option value="III">III</option>
                     <option value="IV">IV</option>
-                    <option value="VI">V</option>
+                    <option value="V">V</option>
                     <option value="VI">VI</option>
                 </select>
-
-                <label> PASE</label>
+                <label>PASE</label>
                 <select name="pase" id="pase">
                     <option value=""></option>
                     <option value="ok">OK</option>
                     <option value="no">NO</option>
-                    
-                </select>       
-            
+                </select>
             </div>
-         </fieldset>
+        </fieldset>
 
-         <fieldset class="fieldset6">
+        <fieldset class="fieldset6">
             <h2>INDICACIONES</h2>
-             <div class="textarea">
-                <textarea class="indicaciones" name="indicaciones" rows="8" cols="90" oninput="limitLines(this, 8)"; placeholder="Condicionalidad / indicaciones / suspensión o mantenimiento de farmacos / solicitud de ic."></textarea>
-
-               
+            <div class="textarea">
+                <textarea class="indicaciones" name="indicaciones" id="indicaciones" rows="8" cols="90" oninput="limitLines(this, 8)" placeholder="Condicionalidad / indicaciones / suspensión o mantenimiento de fármacos / solicitud de ic."></textarea>
             </div>
+        </fieldset>
 
-         </fieldset>
-
-
-
-         <div class="anestesiologos">  
-         
-           
-            <label>ANESTESIOLOGO</label>
+        <div class="anestesiologos">
+            <label>ANESTESIÓLOGO</label>
             <select name="anestesiologo" id="anestesiologo">
                 <option value=""></option>
                 <option value="DR. DANILO NAVA">DR. DANILO NAVA</option>
@@ -259,43 +210,27 @@
                 <option value="DR. ROBERTO OROZCO">DR. ROBERTO OROZCO</option>
                 <option value="DR. DANIEL RIQUELME">DR. DANIEL RIQUELME</option>
                 <option value="DR. ANGEL MONTIEL">DR. ANGEL MONTIEL</option>
-
-               
-             
             </select>
-            <label for="firma" class="firma">FIRMA Y TIMBRE ________________________ </label>
-           
-            </div>
+            <label for="firma" class="firma">FIRMA Y TIMBRE</label>
+        </div>
 
-            <div id="botones">   
-             
-                <button type="submit"  class="BTN" name="BTN" id="BTN">Guardar / Imprimir</button>
-                <button type="reset" class="BTNR" name="BTNR" id="BTNR">Nuevo Paciente</button> 
-                <label for="TC" class="TC">TOMO CONOCIMIENTO___________________ FECHA:_____/______/_____</label>
-                
-               
-
-               
-            </div>
-
-         
-
-
-           
-</form>
+        <div id="botones">
+            <button type="submit" class="BTN" name="BTN" id="BTN">Guardar / Imprimir</button>
+            <button type="reset" class="BTNR" name="BTNR" id="BTNR">Nuevo Paciente</button>
+            <label for="TC" class="TC">TOMO CONOCIMIENTO___________________ FECHA:_____/______/_____</label>
+        </div>
+    </form>
 
 
 
 
 
 
-<script src="script.js"></script>
 
 
-  
-  
 
+
+
+    <script src="script.js"></script>
 </body>
-
-
 </html>
