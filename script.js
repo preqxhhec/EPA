@@ -5,7 +5,7 @@ ocument.getElementById('BTN').addEventListener('click', function(e) {
     xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzYf-vOcMrOquenIFpCaty7DuoeA434AmGKYe8h8xo1SUKjg47YciwLu0sfjvh4G0J24Q/exec');
     xhr.onload = function() {
         if (xhr.status === 200) {
-            document.getElementById('formulario').reset();
+            
             alert('¡Registro exitoso!');
             window.print();
         } else {
