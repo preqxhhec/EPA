@@ -170,3 +170,8 @@ function formatDate(dateString) {
     const day = ('0' + date.getDate()).slice(-2);
     return `${year}-${month}-${day}`;
 }
+
+
+function imprimir(){
+    window.print ();
+}
