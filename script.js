@@ -9,6 +9,7 @@ document.getElementById('BTN').addEventListener('click', function(e) {
             alert('¡Registro exitoso!');
             window.print();
             formulario.reset();
+            cargarFechaActual();
         } else {
             console.error('Submission error:', xhr.status, xhr.responseText);
             alert('Error al enviar el formulario: ' + xhr.responseText);
@@ -177,4 +178,5 @@ function imprimir(){
     window.print ();
     alert('¡REIMPRESIÓN EXITOSA!');
     formulario.reset();
+cargarFechaActual();
 }
