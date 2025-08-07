@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+
+
     <title>Evaluación Preanestésica</title>
 </head>
 <body>
@@ -24,7 +27,7 @@
         </div>
 
         <!-- New Search Section -->
-     <div class="search-section">
+     <div class="search-section" id="buscar">
   <label for="rutSearch">Buscar por RUT:</label>
   <input type="text" id="rutSearch" placeholder="sin (.) con (-)">
   <button type="button" onclick="searchRut()" class="botonpwd">Buscar</button>
@@ -195,7 +198,7 @@
         <fieldset class="fieldset6">
             <h2>INDICACIONES</h2>
             <div class="textarea">
-                <textarea class="indicaciones" name="indicaciones" id="indicaciones" rows="8" cols="90" oninput="limitLines(this, 8)" placeholder="Condicionalidad / indicaciones / suspensión o mantenimiento de fármacos / solicitud de ic."></textarea>
+                <textarea class="indicaciones" name="indicaciones" id="indicaciones" rows="10" cols="90" oninput="limitLines(this, 10)" placeholder="Condicionalidad / indicaciones / suspensión o mantenimiento de fármacos / solicitud de ic. / INDICAR PROFILAXIS ANTIBIOTICA SI CORRESPONDE SEGÚN PROTOCOLO"></textarea>
             </div>
         </fieldset>
 
@@ -223,8 +226,39 @@
     </form>
 
 
+<form class="protocolos" name="protocolos" id="protocolos" >
+    <div class="divprotocolos" id="divprotocolos">
+    <button type="button" class="BTNATB"   onclick="mostrarPDF()">Profilaxis Antibiótica</button>
+  </div>
+
+<!-- Agrega el modal emergente -->
+<div id="loadingModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <p>Buscando...</p>
+  </div>
+</div>
 
 
+<!-- Modal -->
+<div id="modal-enviando" class="modal2">
+  <div class="modal-content2">
+    <h2>Enviando datos...</h2>
+    <p>Por favor, espere...</p>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+  </form>
 
 
 
