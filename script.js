@@ -113,7 +113,7 @@ function searchRut() {
     // Mostrar el modal emergente antes de realizar la búsqueda
     document.getElementById('loadingModal').style.display = 'flex';
 
-    var url = 'https://script.google.com/macros/s/AKfycbzrAMXsmSR1y3wTkvXgm5GBv5vYQt_YLrVW734QTVub6cvu0pz1rBFS7piBZ7vOWgKo/exec?rut=' + encodeURIComponent(rut);
+    var url = 'https://script.google.com/macros/s/AKfycbzYf-vOcMrOquenIFpCaty7DuoeA434AmGKYe8h8xo1SUKjg47YciwLu0sfjvh4G0J24Q/exec?rut=' + encodeURIComponent(rut);
     fetch(url, { method: 'GET' })
         .then(response => {
             if (!response.ok) {
@@ -274,7 +274,7 @@ document.getElementById('BTN').addEventListener('click', function(e) {
   
   var formData = new FormData(document.getElementById('formulario'));
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzrAMXsmSR1y3wTkvXgm5GBv5vYQt_YLrVW734QTVub6cvu0pz1rBFS7piBZ7vOWgKo/exec');
+  xhr.open('POST', 'https://script.google.com/macros/s/AKfycbzYf-vOcMrOquenIFpCaty7DuoeA434AmGKYe8h8xo1SUKjg47YciwLu0sfjvh4G0J24Q/exec');
   xhr.onload = function() {
     if (xhr.status === 200) {
       
