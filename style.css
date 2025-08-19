@@ -329,24 +329,30 @@ margin-top: 5px;
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 5px;
+      display: block;
     }
   
 
-  .BTNATB {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text for contrast */
-    padding: 10px 20px; /* Padding for better appearance */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 14px; /* Readable font size */
+  .BTNATB, .BTNEPA {
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text for contrast */
+            padding: 10px 20px; /* Padding for better appearance */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            font-size: 14px; /* Readable Font size */
+            display: block; /* Makes buttons stack vertically */
+            margin: 10px 0; /* Adds spacing between buttons */
+            width: 5cm;
   }
 
   .BTNATB:hover {
     background-color: #df8107; /* Darker green on hover */
   }
 
-     
+     .BTNEPA:hover {
+    background-color: #df8107; /* Darker green on hover */
+  }
 
  #buscar{
     display:none;
