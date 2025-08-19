@@ -343,4 +343,8 @@ function cerrarModalEnviando() {
 
 
 
-
+//funcion para evitar que el BTNEPA reinicie el formulario
+function openLink(event, url) {
+            event.preventDefault(); // Prevents default behavior (e.g., page reload)
+            window.open(url, '_blank'); // Opens the URL in a new tab
+        }
